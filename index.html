@@ -47,7 +47,15 @@
 
   <!-- 히어로 섹션 -->
   <section class="hero">
+    <!-- 슬라이드쇼 배경 -->
+    <div class="hero-slideshow">
+      <div class="hero-slide active" style="background-image: url('images/hero-1.png')"></div>
+      <div class="hero-slide" style="background-image: url('images/hero-2.png')"></div>
+      <div class="hero-slide" style="background-image: url('images/hero-3.png')"></div>
+      <div class="hero-slide" style="background-image: url('images/hero-4.png')"></div>
+    </div>
     <div class="hero-overlay"></div>
+
     <div class="container hero-inner">
       <!-- 텍스트 영역 -->
       <div class="hero-content">
@@ -78,40 +86,14 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- 미디어 영역 -->
-      <div class="hero-media">
-        <!-- 플로팅 뱃지 카드 -->
-        <div class="hero-float-card float-card-1">
-          <span class="float-icon">🏆</span>
-          <span>합격률 98.5%</span>
-        </div>
-        <div class="hero-float-card float-card-2">
-          <span class="float-icon">💼</span>
-          <span>취업 연계 보장</span>
-        </div>
-
-        <!-- 메인 미디어 카드 -->
-        <div class="hero-media-card">
-          <div class="hero-media-visual">
-            <div class="media-scene">👩‍⚕️🤲👴</div>
-            <p class="media-caption">전문 요양보호사 교육 현장</p>
-            <p class="media-sub">이론 · 실기 · 현장실습 체계적 커리큘럼</p>
-            <div class="media-badges">
-              <span class="media-badge">📚 이론교육 80h</span>
-              <span class="media-badge">🏥 실기교육 80h</span>
-              <span class="media-badge">🏠 현장실습 80h</span>
-            </div>
-          </div>
-          <div class="hero-media-footer">
-            <div class="media-tag">
-              <span class="media-dot"></span>
-              <span>2026 제50기 모집중</span>
-            </div>
-            <a href="#contact" class="media-play" title="상담신청">▶</a>
-          </div>
-        </div>
-      </div>
+    <!-- 슬라이드 인디케이터 -->
+    <div class="slideshow-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
     </div>
   </section>
 

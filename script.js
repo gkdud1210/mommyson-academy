@@ -1,3 +1,24 @@
+// ===== Hero Slideshow =====
+(function() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.dot');
+  let current = 0;
+
+  if (slides.length <= 1) return;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current]?.classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current]?.classList.add('active');
+  }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  setInterval(() => goTo(current + 1), 2000);
+})();
+
 // ===== Mobile Navigation Toggle =====
 const mobileToggle = document.getElementById('mobileToggle');
 const nav = document.getElementById('nav');
