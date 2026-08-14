@@ -52,32 +52,71 @@ ul { list-style: none; }
 /* ===== Top Bar ===== */
 /* ===== 모집광고 배너 ===== */
 .recruit-banner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  text-align: center;
-  background: linear-gradient(90deg, #ffd54f, #ffb300, #ffd54f);
-  background-size: 200% 100%;
-  color: #3a2a00;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 16px;
+  gap: 12px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #241220, #3d1a30 55%, #241220);
+  color: #f8e9f2;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding: 12px 16px;
   text-decoration: none;
-  animation: recruit-pulse 3s ease-in-out infinite;
+  transition: background var(--transition);
+}
+
+.recruit-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(249, 168, 212, 0.16) 45%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  animation: recruit-sheen 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.recruit-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, var(--primary-light), #ffe3c2);
+  color: #3d1a30;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.recruit-banner-text {
+  opacity: 0.92;
+  white-space: nowrap;
+}
+
+.recruit-banner-arrow {
+  opacity: 0.75;
+  transition: transform var(--transition);
 }
 
 .recruit-banner:hover {
-  filter: brightness(1.05);
+  background: linear-gradient(90deg, #2c1526, #4a1f3a 55%, #2c1526);
 }
 
-.recruit-banner strong {
-  color: var(--primary-dark);
+.recruit-banner:hover .recruit-banner-arrow {
+  transform: translateX(4px);
 }
 
-@keyframes recruit-pulse {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+@keyframes recruit-sheen {
+  0% { background-position: 140% 0; }
+  55%, 100% { background-position: -40% 0; }
 }
 
 .top-bar {
@@ -1191,6 +1230,9 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+  .recruit-banner { flex-wrap: wrap; gap: 6px 10px; padding: 10px 16px; font-size: 12.5px; }
+  .recruit-banner-text { white-space: normal; text-align: center; }
+
   .top-bar { font-size: 12px; text-align: center; }
   .top-bar .container { flex-direction: column; gap: 4px; }
 
