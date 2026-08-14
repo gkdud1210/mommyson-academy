@@ -1257,11 +1257,19 @@ ul { list-style: none; }
   }
 
   .hero { padding: 70px 0 80px; min-height: 500px; }
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
   .hero h1 { font-size: 30px; }
   .hero-stats { gap: 20px; }
   .stat strong { font-size: 28px; }
-  .hero-inner { grid-template-columns: 1fr; max-width: 100%; }
+  .hero-inner { grid-template-columns: 1fr; max-width: 100%; padding-left: 0; margin: 0 auto; }
   .hero-content { text-align: center; }
+  .hero-content > p { margin-left: auto; margin-right: auto; }
   .hero-buttons { justify-content: center; }
   .hero-stats { justify-content: center; }
 
