@@ -50,6 +50,36 @@ ul { list-style: none; }
 }
 
 /* ===== Top Bar ===== */
+/* ===== 모집광고 배너 ===== */
+.recruit-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  background: linear-gradient(90deg, #ffd54f, #ffb300, #ffd54f);
+  background-size: 200% 100%;
+  color: #3a2a00;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  text-decoration: none;
+  animation: recruit-pulse 3s ease-in-out infinite;
+}
+
+.recruit-banner:hover {
+  filter: brightness(1.05);
+}
+
+.recruit-banner strong {
+  color: var(--primary-dark);
+}
+
+@keyframes recruit-pulse {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .top-bar {
   background: linear-gradient(90deg, var(--primary-dark), var(--primary));
   color: #fff;
@@ -747,67 +777,6 @@ ul { list-style: none; }
   line-height: 1.7;
 }
 
-/* ===== Instructors ===== */
-.instructors-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.instructor-card {
-  background: var(--bg);
-  border-radius: var(--radius);
-  padding: 40px 28px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.instructor-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.instructor-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
-  color: #fff;
-  font-size: 32px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  box-shadow: 0 4px 16px rgba(236,72,153,0.3);
-}
-
-.instructor-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.instructor-title {
-  font-size: 14px;
-  color: var(--primary);
-  font-weight: 500;
-  display: block;
-  margin-bottom: 16px;
-}
-
-.instructor-card ul {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.instructor-card li {
-  font-size: 13px;
-  color: var(--text-light);
-}
-
 /* ===== Schedule ===== */
 .schedule-table-wrap {
   overflow-x: auto;
@@ -1279,7 +1248,6 @@ ul { list-style: none; }
   .about-grid { grid-template-columns: 1fr; }
   .courses-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
-  .instructors-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .location-grid { grid-template-columns: 1fr; }
