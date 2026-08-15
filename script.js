@@ -103,25 +103,6 @@ contactForm.addEventListener('submit', (e) => {
   contactForm.reset();
 });
 
-// ===== Naver Map =====
-window.addEventListener('load', function () {
-  if (typeof naver === 'undefined') return;
-
-  // 대전 동구청로 66 좌표
-  var location = new naver.maps.LatLng(36.3493, 127.4305);
-
-  var map = new naver.maps.Map('naver-map', {
-    center: location,
-    zoom: 17
-  });
-
-  new naver.maps.Marker({
-    position: location,
-    map: map,
-    title: '엄마손요양보호사교육원'
-  });
-});
-
 // ===== Active Nav Highlight on Scroll =====
 const sections = document.querySelectorAll('.section, .hero');
 const navLinks = document.querySelectorAll('.nav a[href^="#"]');

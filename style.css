@@ -119,25 +119,6 @@ ul { list-style: none; }
   55%, 100% { background-position: -40% 0; }
 }
 
-.top-bar {
-  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
-  color: #fff;
-  font-size: 13px;
-  padding: 8px 0;
-}
-
-.top-bar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.top-bar-right {
-  opacity: 0.85;
-}
-
 /* ===== Header ===== */
 .header {
   position: sticky;
@@ -893,48 +874,6 @@ ul { list-style: none; }
   color: var(--accent);
 }
 
-/* ===== Reviews ===== */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.review-card {
-  background: var(--bg);
-  padding: 32px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform var(--transition);
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-}
-
-.review-stars {
-  color: #ffc107;
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-
-.review-card > p {
-  font-size: 15px;
-  color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.review-author strong {
-  font-size: 15px;
-  margin-right: 8px;
-}
-
-.review-author span {
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
 /* ===== Contact ===== */
 .contact-grid {
   display: grid;
@@ -1041,28 +980,9 @@ ul { list-style: none; }
 /* ===== Location ===== */
 .location-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.map-placeholder {
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: #e8eae8;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.map-inner {
-  text-align: center;
-  color: var(--text-muted);
-}
-
-.map-inner p:first-child {
-  font-size: 48px;
-  margin-bottom: 8px;
+  grid-template-columns: 1fr;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .location-info {
@@ -1241,9 +1161,6 @@ ul { list-style: none; }
   .recruit-banner { flex-wrap: wrap; gap: 6px 10px; padding: 10px 16px; font-size: 12.5px; }
   .recruit-banner-text { white-space: normal; text-align: center; }
 
-  .top-bar { font-size: 12px; text-align: center; }
-  .top-bar .container { flex-direction: column; gap: 4px; }
-
   .mobile-toggle { display: flex; }
 
   .nav {
@@ -1286,7 +1203,7 @@ ul { list-style: none; }
   .hero h1 { font-size: 30px; }
   .hero-stats { gap: 20px; }
   .stat strong { font-size: 28px; }
-  .hero-inner { grid-template-columns: 1fr; max-width: 100%; padding-left: 0; margin: 0 auto; }
+  .hero-inner { grid-template-columns: 1fr; max-width: 100%; padding: 0 20px; margin: 0 auto; }
   .hero-content { text-align: center; }
   .hero-content > p { margin-left: auto; margin-right: auto; }
   .hero-buttons { justify-content: center; }
@@ -1298,9 +1215,7 @@ ul { list-style: none; }
   .about-grid { grid-template-columns: 1fr; }
   .courses-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .location-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 
   .contact-form-wrap { padding: 24px; }
