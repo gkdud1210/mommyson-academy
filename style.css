@@ -143,10 +143,18 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(10px);
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   transition: box-shadow var(--transition);
+}
+
+/* backdrop-filter는 별도 레이어로 분리 (header에 직접 걸면 position:fixed 자식의 기준점이 header로 바뀌는 문제가 있음) */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
 }
 
 .header.scrolled {
