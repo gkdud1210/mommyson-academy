@@ -323,9 +323,9 @@ ul { list-style: none; }
   z-index: 1;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.50) 45%,
-    rgba(0, 0, 0, 0.15) 100%
+    rgba(76, 12, 51, 0.72) 0%,
+    rgba(76, 12, 51, 0.50) 45%,
+    rgba(76, 12, 51, 0.15) 100%
   );
 }
 
@@ -1196,8 +1196,8 @@ ul { list-style: none; }
   .hero-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.55) 0%,
-      rgba(0, 0, 0, 0.55) 100%
+      rgba(76, 12, 51, 0.55) 0%,
+      rgba(76, 12, 51, 0.55) 100%
     );
   }
   .hero h1 { font-size: 30px; }
